@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Avg Price by Neighborhood </title>
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="https://bootswatch.com/sandstone/bootstrap.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="hwstyle.css">
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle=  "collapse" data-target="#bs-example-navbar-collapse-1"  aria-expanded="false">
+          <span class="sr-only"> Toggle navigation </span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand home-button " href="navpage.html">
+            <span class="glyphicon glyphicon-home "></span>
+            <b> Airbnb SF Listings </b>
+          </a>
+        </div>
+        <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a class="dropdown-toggle highlight" data-toggle="dropdown" href="#">Plots
+                <span class="caret"> </span>
+              </a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-highlight ">
+                  <a href="viz1.html" class="highlight"> Room Type Distribution </a>
+                  </li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="viz2.html" class="highlight">Rating Distrubution</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="viz3.html" class="highlight">Location Review Score</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="viz4.html" class="highlight">Cancellation Policy</a></li>
+                </ul>
+            </li>
+            <!-- <li role="separator" class="divider"></li> -->
+
+            <li class="dropdown">
+              <a class="dropdown-toggle highlight" data-toggle="dropdown" href="#"> Dashboard 
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                  <li class="dropdown-highlight ">
+                  <a href="price_dashboard.html" class="highlight"> Avg Price by Neighborhood </a>
+                  </li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#" class="highlight"> Listings by Neighborhood</a></li>
+              </ul>
+            </li>
+            <li><a class="highlight" href="convertcsv.html"> Data </a></li>
+            <li><a class="highlight" href="https://github.com/anupamlalwani/YelpProject_UCB" target="_blank"> Code </a></li>
+            <li><a class="highlight" href="http://localhost:2001" target="_blank"> Price Predictor </a></li>
+          </ul>
+        </div>
+      </div
+    </nav>
+        <!--starting the body text-->
+      <div class="container">
+        
+        <div class="row">
+          <div class="col-md-11 anu-left">
+            <h2> Room Type Distribution </h2>
+            <hr>
+            <div class="row" style="text-align: justify;">
+              
+              <div class='tableauPlaceholder' id='viz1513147208646' style='position: relative'><noscript><a href='#'><img alt='Dashboard 2 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;X7&#47;X7368DD5J&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;X7368DD5J' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;X7&#47;X7368DD5J&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1513147208646');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1000px';vizElement.style.height='827px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+              <!-- <img src="assets_vizdash/room_type.png" class="img-responsive viz1" alt = "Restraunts with reviews"> -->
+              <br>
+              <p class="summary-text">
+                We started with scrapping reviews of 300 closed restaurants in San Francisco, CA in order of their appearance on google search. The first task was to find out, of the collected restaurants which restaurants actually had any reviews to be a vaild data point for our research. 
+              </p>
+              <p>
+                We were able to find out 92.3% of restaurants (277) did have reviews so our sample data was good enough to work with. Also we took into account if a restaurant had way to many reviews our data processing time was increased to much. To take care of that we limited our reviews to 60 per restaurant for our anlysis.
+              </p>  
+                
+            </div>
+          </div>
+          <!-- <div class="col-md-offset-1 col-md-3 anu-right">
+            <h2> Visualizations </h2>
+            <hr>
+            <div class="row all-pie-charts">
+              <a href="#">
+                <img src="assets_vizdash/room_type.png" class="img-responsive pie-chart" style="width:120px; border:3px solid grey;" alt = "room_type">
+              </a>
+              <a href="viz2.html">
+                <img src="assets_vizdash/no_hosts.png" class="img-responsive pie-chart" style="width:120px" alt = "rating distribution">
+              </a>
+              <a href="viz3.html">
+                <img src="assets_vizdash/location.png" class="img-responsive pie-chart" style="width:120px" alt = "locatin reviews">
+              </a>
+              <a href="viz4.html">
+                <img src="assets_vizdash/cancelpolicy.png" class="img-responsive pie-chart" style="width:120px" alt = "cancellation policy">
+              </a>
+            </div> -->
+            
+          
+          </div>
+        </div>
+        <footer class="footer navbar-fixed-bottom footer-format">
+          <p> &copy; Copyright - Analysis of Airbnb Hostings in San Francisco by Anupam Lalwani - Dec 2017
+        </footer> 
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+  </html>

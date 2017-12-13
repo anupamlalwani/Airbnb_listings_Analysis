@@ -1,0 +1,117 @@
+<!-- viz3.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Location Review Score </title>
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="https://bootswatch.com/sandstone/bootstrap.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="hwstyle.css">
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle=  "collapse" data-target="#bs-example-navbar-collapse-1"  aria-expanded="false">
+          <span class="sr-only"> Toggle navigation </span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand home-button " href="navpage.html">
+            <span class="glyphicon glyphicon-home "></span>
+            <b> Airbnb SF Listings </b>
+          </a>
+        </div>
+        <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a class="dropdown-toggle highlight" data-toggle="dropdown" href="#">Plots
+                <span class="caret"> </span>
+              </a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-highlight ">
+                  <a href="viz1.html" class="highlight"> Room Type Distribution </a>
+                  </li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="viz2.html" class="highlight">Rating Distrubution</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#" class="highlight">Location Review Score</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="viz4.html" class="highlight">Cancellation Policy</a></li>
+                </ul>
+            </li>
+            <!-- <li role="separator" class="divider"></li> -->
+
+            <li class="dropdown">
+              <a class="dropdown-toggle highlight" data-toggle="dropdown" href="#"> Dashboard 
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                  <li class="dropdown-highlight ">
+                  <a href="price_dashboard.html" class="highlight"> Avg Price by Neighborhood </a>
+                  </li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="listings_dashboard.html" class="highlight"> Listings by Neighborhood</a></li>
+              </ul>
+            </li>
+            <li><a class="highlight" href="convertcsv.html"> Data </a></li>
+            <li><a class="highlight" href="https://github.com/anupamlalwani/YelpProject_UCB" target="_blank"> Code </a></li>
+            <li><a class="highlight" href="http://localhost:2001" target="_blank"> Price Predictor </a></li>
+          </ul>
+        </div>
+      </div
+    </nav>
+        <!--starting the body text-->
+      <div class="container">
+        
+        <div class="row">
+          <div class="col-md-8 anu-left">
+            <h2 style="color: grey"> Location Review Score </h2>
+            <hr>
+
+            <div class="row" style="text-align: justify;">
+              
+              <img src="assets_vizdash/location.png" class="img-responsive viz1" alt = "Negative Score vs Yelp-rating ">
+              <p class="summary-text">
+                The figure above shows the main part of our analysis. Vader Sentiment score vs Yelp Ratings. Vader Sentiment is a python library that has predefined scores for the sentiment behind every word. Its not the most perfect library but does the job absolutely fine to score the sentiment behind any sentence. Vader score is given in 4 categories - positive, negative, neutral and compound. 
+              </p>
+              <p></p>
+              <p>
+                Since we were more interested to find out how negative reviews affect restaurant ratings, we plotted Vader Sentiment negative score vs Yelp Ratings for that restaurant. As we can see in the graph that restaurants in general did not have very high negative vader sentiment score, which means the closed restaurants did not have major reviews expressing negative sentiments from customers. 
+                Majority restaurants had higher yelp ratings and lower vader sentiment negative scores. By this time we had a picture of what the final conclusion might look like.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-offset-1 col-md-3 anu-right">
+            <h2 style="color: grey"> Visualizations </h2>
+            <hr>
+            <div class="row all-pie-charts">
+
+              <a href="viz1.html">
+                <img src="assets_vizdash/room_type.png" class="img-responsive pie-chart" style="width:120px" alt = "Room Type Distribution">
+              </a>
+              <a href="viz2.html">
+                <img src="assets_vizdash/no_hosts.png" class="img-responsive pie-chart" style="width:120px; ;" alt = "Hosts Concentration">
+              </a>
+              <a href="#">
+                <img src="assets_vizdash/location.png" class="img-responsive pie-chart" style="width:120px;border:3px solid grey;" alt = "Location reviews">
+              </a>
+              <a href="viz4.html">
+                <img src="assets_vizdash/cancelpolicy.png" class="img-responsive pie-chart" style="width:120px" alt = "Cancellation policy">
+              </a>
+            </div>
+          </div>
+        </div>
+        <footer class="footer navbar-fixed-bottom footer-format">
+          <p> &copy; Copyright - Yelp Review Analysis by Anupam Lalwani - Oct 2017
+        </footer> 
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+  </html>

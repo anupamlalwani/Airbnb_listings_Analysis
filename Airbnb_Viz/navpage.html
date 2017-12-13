@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb SanFrancisco listings</title>
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    <!-- <link rel="stylesheet" type="text/css" href="https://bootswatch.com/sandstone/bootstrap.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="hwstyle.css">
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle=  "collapse" data-target="#bs-example-navbar-collapse-1"  aria-expanded="false">
+          <span class="sr-only"> Toggle navigation </span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand home-button " href="#">
+            <span class="glyphicon glyphicon-home "></span>
+            <b> Airbnb SF Listings </b>
+          </a>
+        </div>
+        <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a class="dropdown-toggle highlight" data-toggle="dropdown" href="#">Plots
+                <span class="caret"> </span>
+              </a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-highlight ">
+                  <a href="viz1.html" class="highlight"> Room Type Distribution </a>
+                  </li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="viz2.html" class="highlight">Rating Distrubution</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="viz3.html" class="highlight">Location Review Score</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="viz4.html" class="highlight">Cancellation Policy</a></li>
+                </ul>
+            </li>
+            <!-- <li role="separator" class="divider"></li> -->
+
+            <li class="dropdown">
+              <a class="dropdown-toggle highlight" data-toggle="dropdown" href="#"> Dashboard 
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                  <li class="dropdown-highlight ">
+                  <a href="price_dashboard.html" class="highlight"> Avg Price by Neighborhood </a>
+                  </li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="listings_dashboard.html" class="highlight"> Listings by Neighborhood</a></li>
+              </ul>
+            </li>
+            <li><a class="highlight" href="convertcsv.html"> Data </a></li>
+            <li><a class="highlight" href="https://github.com/anupamlalwani/YelpProject_UCB" target="_blank"> Code </a></li>
+            <li><a class="highlight" href="http://localhost:2001" target="_blank"> Price Predictor </a></li>
+          </ul>
+        </div>
+      </div
+    </nav>
+    <!--starting the body text-->
+    <div class="container">
+      
+      <div class="row">
+        <div class="col-md-12 anu-left">
+          <h3> Summary: Airbnb Host in San Francisco</h3>
+          <hr>
+          <div class="row" style="text-align: justify;">
+            <img src="assets_vizdash/airbnbsign.jpg" class="img-responsive summary-pic" alt = "sf-airbnb">
+
+            <p class="summary-text">
+               <br>
+              I love trying different restaurants and different cuisines. These days there are wide range of restaurants available and I am highly depended on Yelp for reviews before trying a new one.
+              I like Yelp's platform! How people can express their opinions and experience about any place they visited from grocery store to flying schools.
+            </p>
+            <p>
+              Coming back to restaurants, sometimes I like a restaurant but it closes and I never understand why or I never get to find out why. So, I and my friend came up with an idea to do some research. Since everyone these days rely on Yelp for restaurant/food reviews; we started thinking - can Yelp reviews influence a restaurant to close?
+            </p>
+            <p>
+              We did quite some digging by using reviews of some 300 closed restaurants in San Francisco, CA. We used technologies like data scrapping, python - numpy, pandas, matplotlib, nltk, scipy and few others to acquire data and do analysis on it. The figure here indicates that when collecting all reviews and making a wordcloud out of it (meaning the words that were repeated the most will have a bigger size -importance in the word cloud) we could see except for food items, words like 'didn't', 'disappointed','salty','nothing' have quite some importance. Well that's not enough to connect the dots though. But it is clear that people were not very happy visiting those restaurants.
+            </p>
+            <p>
+              At the end we came to conclusion that Yelp reviews good/bad do not play a big role in closing a restaurant, there might be other reasons. To dig deeper into those reasons might be a good project all together for some other time.
+            </p>
+            <p>
+              To find out more about our research please have a look at various plots and data that we summarised on this website. You can also get in-depth details regarding our code and analysis on Code page. Thank you for visiting!
+            </p>
+            
+          </div>
+        </div>
+        <div class="col-md-1"></div>
+        <!-- <div class="col-md-3 anu-right">
+          <h2> Visualizations</h2>
+          <hr>
+          <div class="row all-pie-charts">
+            <a href="viz1.html" target="_blank">
+              <img src="assets_vizdash/output_6_0.png" class="img-responsive pie-chart" style="width:120px" alt = "Restraunts with reviews">
+            </a>
+            <a href="viz2.html" target="_blank">
+              <img src="assets_vizdash/output_7_0.png" class="img-responsive pie-chart" style="width:120px" alt = "rating distribution">
+            </a>
+            <a href="viz3.html" target="_blank">
+              <img src="assets_vizdash/output_10_0.png" class="img-responsive pie-chart" style="width:120px" alt = "negtive-score vs Yelp-rating">
+            </a>
+            <a href="viz4.html" target="_blank">
+              <img src="assets_vizdash/output_18_0.png" class="img-responsive pie-chart" style="width:120px" alt = "positive-score vs Yelp-rating">
+            </a>
+            <hr/>
+          </div>
+        </div>
+      </div> -->
+      <footer class="footer navbar-fixed-bottom footer-format">
+        <p> &copy; Copyright - Analysis of Airbnb Hostings in San Francisco by Anupam Lalwani - Dec 2017
+        </p>
+      </footer>
+    </div>
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>

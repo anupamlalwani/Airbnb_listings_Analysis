@@ -1,0 +1,152 @@
+/*index.html*/
+.home-button{
+padding: 20px;
+margin-left: 0px !important; 
+font-weight: 20 !important;
+color:grey !important;
+/*background-color: grey;*/
+text-align: center;
+}
+
+.container{
+	margin-bottom: 0px;
+}
+.home-button:hover{
+	color:white !important;
+	background-color: grey !important;
+}
+
+.highlight:hover{
+color: white !important;
+background-color: grey !important;
+background-image: none;
+
+}
+
+h2,h3,h4{
+	color: grey;
+}
+
+/*body { 
+	padding-left : 70px; 
+background-color: #3e403b;
+}
+*/
+
+.summary-pic,.summary-text{
+	display: inline-block;
+}
+
+.comparision{
+	background-color: white !important;
+
+}
+
+.summary-pic{
+	width:80%;
+	height:50%;
+	float:center;
+	padding: 5px;
+}
+
+/*.col-sm-8{
+	padding:10px;
+	margin-color: grey;
+
+}*/
+
+.pie-chart{
+display: inline !important;
+max-width: 450px;
+max-height: 350px;
+margin: 10px;
+}
+
+.all-pie-charts{
+	text-align: center;
+}
+
+.pie-chart:hover{
+	border: 3px solid grey;
+}
+
+.pie-chart:active{
+border: 3px solid grey;
+}
+
+.anu-left,.anu-right{
+	background-color: white;
+	margin: 10px;
+}
+
+.anu-left{
+	padding:30px;
+}
+
+/*convertcsv.html*/
+.datatable{
+padding:30px;
+margin-top: 30px;
+margin-bottom: 40px;
+background-color: white;
+}
+
+
+.scroll{
+height: 450px;
+display: block;
+overflow-y: scroll;
+overflow-x: scroll;
+border: 2px solid grey;
+}
+
+thead{
+	background-color: grey;
+    color:white;
+ }
+
+/*viz1.html*/
+.viz1{
+margin: 5px;
+padding: 20px;
+
+}
+
+.comparision-img{
+display: inline;
+float:left;
+width: 70%;
+
+}
+
+/*active link*/
+a { 
+  position: relative;
+}
+a:active {
+  top: 2px;
+}
+
+
+.footer-format{
+background-color: grey;
+color: white;
+padding-top: 7px;
+text-align: center;
+
+}
+
+
+/*@media (max-width: 480px) {
+  .container {
+    width: 450px;
+  }
+ 
+*/
+/* testing media query
+@media (min-width: 481px) and (max-width: 780px){
+	body{
+		background-color: green;
+	}
+}*/
+

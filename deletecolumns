@@ -1,0 +1,46 @@
+
+Sub DeleteColumns()
+
+Range("A1").Select
+
+Do Until ActiveCell.Value = ""
+
+    If ActiveCell.Value = "id" Or ActiveCell.Value = "scrape_id" Or ActiveCell.Value = "last_scraped" Or ActiveCell.Value = "name" Or ActiveCell.Value = "host_id" Or ActiveCell.Value = "host_name" Or ActiveCell.Value = "host_since" Or ActiveCell.Value = "host_response_rate" Or ActiveCell.Value = "host_neighbourhood" Or ActiveCell.Value = "host_total_listings_count" Or ActiveCell.Value = "street" Or ActiveCell.Value = "neighbourhood_cleansed" Or ActiveCell.Value = "city" Or ActiveCell.Value = "state" Or ActiveCell.Value = "zipcode" Or ActiveCell.Value = "market" Or ActiveCell.Value = "smart_location" Or ActiveCell.Value = "country_code" Or ActiveCell.Value = "country" Or ActiveCell.Value = "latitude" Or ActiveCell.Value = "longitude" Or ActiveCell.Value = "is_location_exact" Or ActiveCell.Value = "property_type" Or ActiveCell.Value = "room_type" Or ActiveCell.Value = "accommodates" Or ActiveCell.Value = "bathrooms" Or ActiveCell.Value = "bedrooms"  _
+        Or ActiveCell.Value = "beds" _
+        Or ActiveCell.Value = "bed_type" _
+        Or ActiveCell.Value = "amenities" Or ActiveCell.Value = "square_feet" Or ActiveCell.Value = "price" Or ActiveCell.Value = "weekly_price" _
+        Or ActiveCell.Value = "security_deposit" _
+        Or ActiveCell.Value = "cleaning_fee" _
+        Or ActiveCell.Value = "guests_included" _
+        Or ActiveCell.Value = "extra_people" _
+        Or ActiveCell.Value = "minimum_nights" _
+        Or ActiveCell.Value = "maximum_nights" _
+        Or ActiveCell.Value = "availability_365" _
+        Or ActiveCell.Value = "number_of_reviews" _
+        Or ActiveCell.Value = "first_review" _
+        Or ActiveCell.Value = "last_review" _
+        Or ActiveCell.Value = "review_scores_rating" _
+        Or ActiveCell.Value = "review_scores_accuracy" _
+        Or ActiveCell.Value = "review_scores_cleanliness" _
+        Or ActiveCell.Value = "review_scores_checkin" _
+        Or ActiveCell.Value = "review_scores_communication" _
+        Or ActiveCell.Value = "review_scores_location" _
+        Or ActiveCell.Value = "review_scores_value" _
+        Or ActiveCell.Value = "instant_bookable" _
+        Or ActiveCell.Value = "cancellation_policy" _
+        Or ActiveCell.Value = "calculated_host_listings_count" _
+        Or ActiveCell.Value = "reviews_per_month" Then
+
+        ActiveCell.Offset(0, 1).Select
+    
+    Else
+
+        ActiveCell.EntireColumn.Select
+        Selection.Delete Shift:=xlToLeft
+        Selection.End(xlUp).Select
+
+    End If
+Loop
+
+
+End Sub

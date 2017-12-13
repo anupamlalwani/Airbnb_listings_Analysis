@@ -1,0 +1,119 @@
+<!-- viz4.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cancellation Policy </title>
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/minty/bootstrap.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="hwstyle.css">
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle=  "collapse" data-target="#bs-example-navbar-collapse-1"  aria-expanded="false">
+          <span class="sr-only"> Toggle navigation </span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand home-button " href="navpage.html">
+            <span class="glyphicon glyphicon-home "></span>
+            <b> Airbnb SF Listings </b>
+          </a>
+        </div>
+        <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a class="dropdown-toggle highlight" data-toggle="dropdown" href="#">Plots
+                <span class="caret"> </span>
+              </a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-highlight ">
+                  <a href="#" class="highlight"> Room Type Distribution </a>
+                  </li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="viz2.html" class="highlight">Rating Distrubution</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="viz3.html" class="highlight">Location Review Score</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="viz4.html" class="highlight">Cancellation Policy</a></li>
+                </ul>
+            </li>
+            <!-- <li role="separator" class="divider"></li> -->
+
+            <li class="dropdown">
+              <a class="dropdown-toggle highlight" data-toggle="dropdown" href="#"> Dashboard 
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                  <li class="dropdown-highlight ">
+                  <a href="price_dashboard.html" class="highlight"> Avg Price by Neighborhood </a>
+                  </li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="listings_dashboard.html" class="highlight"> Listings by Neighborhood</a></li>
+              </ul>
+            </li>
+            <li><a class="highlight" href="convertcsv.html"> Data </a></li>
+            <li><a class="highlight" href="https://github.com/anupamlalwani/YelpProject_UCB" target="_blank"> Code </a></li>
+            <li><a class="highlight" href="http://localhost:2001" target="_blank"> Price Predictor </a></li>
+          </ul>
+        </div>
+      </div
+    </nav>
+        <!--starting the body text-->
+      <div class="container">
+        
+        <div class="row">
+          <div class="col-md-8 anu-left">
+            <h2 style="color: grey"> Cancellation Policy </h2>
+            <hr>
+
+            <div class="row" style="text-align: justify;">
+              
+              <img src="assets_vizdash/cancelpolicy.png" class="img-responsive viz1" alt = "Cancellation policy ">
+              <p class="summary-text">
+                When we were not able to find strong relation between Vader Negative score and Yelp ratings, next step was to check relation between Vader Positive score and Yelp ratings. 
+              </p>
+              <p>
+                As seen in the graph, restaurants seem to have very low Vader positive score and yet higher Yelp ratings. There were few outliers having 0 vader score and 0 ratings, but not many. We were looking for instances where restaurants had lower Vader positive score and lower Yelp ratings. But we did not find many restaurants falling in such category. This made us conclude that Negative/Positive Vader sentiment score does not affect the Yelp ratings. 
+              </p>
+              <p>
+                <h3>Conclusion:</h3>
+                Yelp reviews do not cause restaurants to close!
+              </p>
+            </div>
+          </div>
+          <div class="col-md-offset-1 col-md-3 anu-right">
+            <h2 style="color: grey"> Visualizations </h2>
+            <hr>
+            <div class="row all-pie-charts">
+
+              <a href="viz1.html">
+                <img src="assets_vizdash/room_type.png" class="img-responsive pie-chart" style="width:120px" alt = "Room Type">
+              </a>
+              <a href="viz2.html">
+                <img src="assets_vizdash/no_hosts.png" class="img-responsive pie-chart" style="width:120px; border:3px solid grey;" alt = "hosts concentration">
+              </a>
+              <a href="viz3.html">
+                <img src="assets_vizdash/location.png" class="img-responsive pie-chart" style="width:120px" alt = "location Reviews">
+              </a>
+              <a href="#">
+                <img src="assets_vizdash/cancelpolicy.png" class="img-responsive pie-chart" style="width:120px" alt = "Cancellation Policy">
+              </a>
+            </div>
+          </div>
+        </div>
+        <footer class="footer navbar-fixed-bottom footer-format">
+          <p> &copy; Copyright - Analysis of Airbnb Hostings in San Francisco - by Anupam Lalwani - Dec 2017
+        </footer> 
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+  </html>
