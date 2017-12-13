@@ -1,8 +1,7 @@
 ## Airbnb Listings Analysis
 Final Project UCB
 
-![Airbnb Sign](assets_vizdash/airbnbsign.jpg "Logo Title Text 1")
-
+<a href="https://anupamlalwani.github.io/Airbnb_listings_Analysis/" target="_blank"><img src="assets_vizdash/airbnbsign.jpg" alt="Airbnb Logo"></a>
 This project was about analyzing data of Airbnb listings in San Francisco for past 1.5 years, understanding the price distribution of listings in different neighborhoods and creating a predictive model to estimate the listing price of a potential airbnb place.  
 
 Airbnb and San Francisco has love-hate relationship. Airbnb has been in many controversies in San Francisco. Both the public, government and Airbnb company have learnt to survive and exist together. 
