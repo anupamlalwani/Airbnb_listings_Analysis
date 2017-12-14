@@ -35,6 +35,7 @@ background-color: #3e403b;
 
 .summary-pic,.summary-text{
 	display: inline-block;
+	text-align: justify;
 }
 
 .comparision{
@@ -109,6 +110,7 @@ thead{
 .viz1{
 margin: 5px;
 padding: 20px;
+size: 300px 300px
 
 }
 

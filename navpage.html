@@ -70,28 +70,47 @@
       
       <div class="row">
         <div class="col-md-12 anu-left">
-          <h3> Summary: Airbnb Host in San Francisco</h3>
+          <h3> Summary: Analysis of Airbnb Listings in San Francisco</h3>
           <hr>
           <div class="row" style="text-align: justify;">
             <img src="assets_vizdash/airbnbsign.jpg" class="img-responsive summary-pic" alt = "sf-airbnb">
 
             <p class="summary-text">
                <br>
-              I love trying different restaurants and different cuisines. These days there are wide range of restaurants available and I am highly depended on Yelp for reviews before trying a new one.
-              I like Yelp's platform! How people can express their opinions and experience about any place they visited from grocery store to flying schools.
+              Airbnb has been prey to controversies for multiple reasons in many different cities, especially in San Francisco. Over the time; city, its people, its government and Airbnb have learnt to live in harmony. This project was not about digging deep into contoversies. The main target of this project was to understand the spread of Airbnb listings in SF, study its pricing and create a simple predictive model to estimate the price of the listing if someone wanted to become an Airbnb host depending on few features of the property.
             </p>
             <p>
-              Coming back to restaurants, sometimes I like a restaurant but it closes and I never understand why or I never get to find out why. So, I and my friend came up with an idea to do some research. Since everyone these days rely on Yelp for restaurant/food reviews; we started thinking - can Yelp reviews influence a restaurant to close?
+              The intial idea was to scrape data from Airbnb website, but since Airbnb has been very infamous in past few years, I was lucky enough to find listings data from <a href="http://tomslee.net/airbnb-data-collection-get-the-data" target="_blank">Tom Slee's website</a>
             </p>
             <p>
-              We did quite some digging by using reviews of some 300 closed restaurants in San Francisco, CA. We used technologies like data scrapping, python - numpy, pandas, matplotlib, nltk, scipy and few others to acquire data and do analysis on it. The figure here indicates that when collecting all reviews and making a wordcloud out of it (meaning the words that were repeated the most will have a bigger size -importance in the word cloud) we could see except for food items, words like 'didn't', 'disappointed','salty','nothing' have quite some importance. Well that's not enough to connect the dots though. But it is clear that people were not very happy visiting those restaurants.
-            </p>
-            <p>
-              At the end we came to conclusion that Yelp reviews good/bad do not play a big role in closing a restaurant, there might be other reasons. To dig deeper into those reasons might be a good project all together for some other time.
-            </p>
-            <p>
-              To find out more about our research please have a look at various plots and data that we summarised on this website. You can also get in-depth details regarding our code and analysis on Code page. Thank you for visiting!
-            </p>
+              
+              <ol>Here is the project summary:
+                <br>
+                <li><h4>1. Data Acquisition </h4>
+                  <p> Data was collected from Tom Slee's website. Data was scraped once every month and I had some 20 csvs for 20 months. Data was not that accurate or perfect as it represented just one day of information for any given month.</p>
+                </li>
+                <li><h4>2. Data Cleaning</h4>
+                  <p> There were many extra spaces, special characters like '$', '{}' in the data and many null values for basic fields like number of bedrooms and bathrooms. Data was made model ready using Python libraries like Pandas and Numpy.</p>
+                </li>
+                <li><h4>3. Feature and Model Selection </h4>
+                  <p> There were number of features that were interesting to be used in a predictive model. Important question was to decide which predictive model to use. I started with Linear Regression and created few Univariate models. Those models were not at all robust and there was no correlation between price (target variable) and the univariate feature. I tried Multivariate Linear Regression then. Again the correlation was too low and model was not robust at all.</p>
+                    <p>
+                      Decided to move on from Linear Regression to Gradient Boosting as its more robust than Linear Regression. Started with 2 features (Number of bedrooms and bathrooms in potential listing) and noticed model score was better than Linear Regression and also the predictions made more sense. Included one more feature of neighborhood, which I thought was important and should have an impact on price of a airbnb listing.
+                    </p>
+                    <p>
+                      For the purpose of predictive modeling, data of only Oct 2017 was used in order to avoid the model to train on duplicate data of previous months. 
+                    </p>
+                </li>
+                <li><h4>4. Analysis and Dashboard creation </h4>
+                  <p> 
+                    I noticed many interesting things about Airbnb listings in SF. Some of them are displayed in Plots and Dashboard section. I used Tableau for visualization purpose. 
+                  </p>
+                </li>
+              </ol>
+              <hr>
+              <div class="row"></div>
+            <p><h4>Thank you for visiting my Airbnb in SF Analysis website.</h4></p>
+    
             
           </div>
         </div>
