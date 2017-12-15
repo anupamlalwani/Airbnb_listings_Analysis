@@ -29,20 +29,25 @@ body{
   linear-gradient(
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5));
-  background-size: cover;
+  width: 100%;
+
+  
+  /*margin: 0 auto;*/
   ; 
 }
 
 .top{
-  
+  width: 95%;
   padding: 10px;
-  position: absolute;
+  position: relative;
   top: 25%;
   /*left: 40%;*/
   right: 0%;
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 a:hover{
